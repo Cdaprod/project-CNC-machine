@@ -1,0 +1,6 @@
+[submodule "GRBL"]
+	path = GRBL
+	url = https://Cdaprod@github.com/gnea/grbl
+[submodule "doesBot(GRBL v1.1 Board)"]
+	path = doesBot(GRBL v1.1 Board)
+	url = https://github.com/gnea/grbl.wiki.git
