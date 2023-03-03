@@ -1,0 +1,11 @@
+#include "CNCController.h"
+
+void setup() {
+  // Call a function defined in the CNCController.h header file
+  initializeCNCController();
+}
+
+void loop() {
+  // Call another function defined in the CNCController.h header file
+  moveCNCController();
+}
