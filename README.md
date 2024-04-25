@@ -152,3 +152,101 @@ For each step, ensure you document your settings, observations, and any adjustme
 - **Cooling System**: Regular maintenance checks can prevent overheating issues, which are common in high-performance spindles.
 
 If you encounter specific issues during these steps, feel free to provide more details for targeted assistance.
+
+---
+
+# Building the Power Distribution and Controller Junction Box
+
+This guide outlines the assembly of a Power Distribution and Controller Junction Box for a CNC setup, detailing the components and their integration for AC and DC power management and machine control.
+
+## AC Section
+
+### Components Overview
+
+The following components are required for the AC section of the Junction Box:
+
+1. **Junction Box (16" x 20")**: Serves as the housing for all electrical components, providing protection and an organized space for the AC and DC sections.
+2. **DIN Rails and Screw Terminals**: Color-coded for easy identification and separation of different circuits (Red for live, Black for neutral, Green/Yellow for earth ground, and End stops for secure mounting).
+3. **Rotary Disconnect Switch**: A safety device to completely disconnect power to the Junction Box when necessary.
+4. **Dual Pole Breaker (32 amps)**: Offers circuit protection for the entire system, ensuring safety from overcurrent situations.
+5. **AC/DC Power Supply (24v, 5amp)**: Converts AC to DC power for low-voltage components and control circuits.
+6. **Magnetic Contactor with NO Auxiliary Contact**: Utilizes a 24v switch for a latching circuit, allowing for a momentary on/off control of the system.
+7. **Dual Pole Breaker for VFD (10 amps)**: Dedicated breaker for the Variable Frequency Drive (VFD), providing protection and isolation.
+8. **Single Pole Breakers for Power Supply**: Two breakers to manage and protect the power supply units.
+9. **Momentary Switch - On/Off Button (NO/NC)**: A control button that allows for the momentary activation or deactivation of the circuit.
+10. **AC Power Meter Display**: Monitors and displays the power usage of the system.
+11. **Two-Flip-Switch for VFD and Water Pump**: Controls the VFD and the coolant water pump independently.
+12. **AC/DC Power Supply (24v, 20amp)**: A higher capacity power supply for components requiring more current.
+13. **VFD (1 or 3 Phase, 110v or 240v)**: Controls the speed of the spindle motor via frequency modulation.
+14. **Stepper Drivers (x3)**: Drive the stepper motors for the X, Y, and Z axes, receiving signals from the CNC controller.
+15. **CNC Controller**: The brain of the CNC machine, interpreting G-code and commanding the stepper drivers accordingly.
+16. **Aviator Plugs**: Used for quick disconnects for each motor, limit switch, laser, and touch probe, enhancing modularity and maintenance.
+17. **USB Case Mountable Extension**: Provides an accessible USB port on the case, facilitating connections to external devices.
+18. **E-Stop Switch**: An emergency stop switch that overrides all operations, ensuring immediate halting of all machine activity for safety.
+19. **5v LED Strip**: Illuminates the interior of the Junction Box for visibility during maintenance or operation.
+20. **Raspberry Pi with Display (case mountable)**: A compact computer with a display for controlling the CNC machine or monitoring its status.
+
+### Assembly and Integration Guidelines
+
+- **Prioritize Safety**: Ensure all components are rated for the voltages and currents they will handle. Install breakers and emergency switches within easy reach.
+- **Organization**: Arrange components on DIN rails in a logical order that follows the flow of power and control signals.
+- **Accessibility**: Mount components like the Raspberry Pi display and USB extension in a position where they are easily viewable and accessible.
+- **Cable Management**: Use wire ducts or cable organizers to route wiring neatly, preventing tangling and reducing EMI.
+- **Ventilation**: Ensure adequate cooling for the Junction Box, especially around power supplies and stepper drivers that generate heat.
+- **Testing**: After assembly, carefully test each component and circuit for proper operation before integrating the Junction Box with the CNC machine.
+
+### Documentation and Labeling
+
+- Maintain a detailed schematic of the wiring inside the Junction Box.
+- Label all terminals, switches, and breakers clearly to correspond with the schematic.
+- Create a maintenance log to keep track of any changes or repairs.
+
+## DC Section
+
+*(To be detailed similarly, focusing on DC components and wiring specifics.)*
+
+---
+
+This refined documentation should serve as a comprehensive guide for assembling and understanding the function of each component in the Power Distribution and Controller Junction Box. It’s important to review and iterate on the documentation as the project evolves to ensure accuracy and ease of use for anyone interfacing with the Junction Box in the future.
+## Terminal Breakout Table
+Including fans, a spindle pump, and an emergency stop (E-stop) switch adds more elements to your terminal block organization. Here's an updated table that accounts for these additional components:
+
+| Component        | Wire Label/Color | Terminal Block Label | Description/Use                    | Additional Notes                |
+|------------------|------------------|----------------------|------------------------------------|---------------------------------|
+| X Motor          | Red              | XA+                  | Phase A+ for X-axis motor          |                                 |
+| X Motor          | Blue             | XA-                  | Phase A- for X-axis motor          |                                 |
+| X Motor          | Green            | XB+                  | Phase B+ for X-axis motor          |                                 |
+| X Motor          | Black            | XB-                  | Phase B- for X-axis motor          |                                 |
+| Y Motor          | Red              | YA+                  | Phase A+ for Y-axis motor          | Repeat pattern for each axis    |
+| Y Motor          | Blue             | YA-                  | Phase A- for Y-axis motor          |                                 |
+| Y Motor          | Green            | YB+                  | Phase B+ for Y-axis motor          |                                 |
+| Y Motor          | Black            | YB-                  | Phase B- for Y-axis motor          |                                 |
+| Z Motor          | Red              | ZA+                  | Phase A+ for Z-axis motor          |                                 |
+| Z Motor          | Blue             | ZA-                  | Phase A- for Z-axis motor          |                                 |
+| Z Motor          | Green            | ZB+                  | Phase B+ for Z-axis motor          |                                 |
+| Z Motor          | Black            | ZB-                  | Phase B- for Z-axis motor          |                                 |
+| Limit Switch X   | Red/White        | LSX+                 | Positive for X-axis limit switch   | Commonly NO or NC               |
+| Limit Switch X   | Black            | LSX-                 | Negative for X-axis limit switch   |                                 |
+| Limit Switch Y   | Red/White        | LSY+                 | Positive for Y-axis limit switch   | Repeat pattern for each axis    |
+| Limit Switch Y   | Black            | LSY-                 | Negative for Y-axis limit switch   |                                 |
+| Limit Switch Z   | Red/White        | LSZ+                 | Positive for Z-axis limit switch   |                                 |
+| Limit Switch Z   | Black            | LSZ-                 | Negative for Z-axis limit switch   |                                 |
+| Touch Plate      | Red              | TP+                  | Touch plate positive               |                                 |
+| Touch Plate      | Black            | TP-                  | Touch plate negative               |                                 |
+| Spindle          | Varies           | SP                   | Wires for spindle power/control    | Check spindle manual for details|
+| PWM Laser        | Varies           | PWM                  | PWM signal for laser control       |                                 |
+| Laser Power      | Varies           | LP+ / LP-            | Power for laser                    | Check laser manual for details  |
+| Cooling Fan      | Red              | FAN+                 | Positive for cooling fan           |                                 |
+| Cooling Fan      | Black            | FAN-                 | Negative for cooling fan           | May require additional control  |
+| Spindle Pump     | Red              | PUMP+                | Positive for spindle coolant pump  |                                 |
+| Spindle Pump     | Black            | PUMP-                | Negative for spindle coolant pump  |                                 |
+| E-Stop           | Red              | ESTOP+               | Positive for E-stop switch         | Circuit should cut main power   |
+| E-Stop           | Black            | ESTOP-               | Negative for E-stop switch         |                                 |
+
+**Additional Notes:**
+
+- **Cooling Fan**: Depending on the type of fan (AC or DC), the wiring and control method might differ. DC fans might be controlled via PWM, while AC fans might be directly connected to power.
+- **Spindle Pump**: Ensure the pump is rated for the voltage and current supplied. Some pumps may also have a speed control input.
+- **E-Stop**: The E-stop wiring should be such that it cuts power to all critical components, ensuring an immediate halt to all operations when engaged. This is typically wired in series with the main power control circuit or with a safety relay for complex machines.
+
+Ensure that all wiring is up to electrical standards and safely insulated. Grounding should be done according to the electrical codes in your area. The E-stop circuitry is critical and must be tested thoroughly to ensure it functions as expected in an emergency. It's wise to consult the machine's electrical diagrams or a professional if there's any uncertainty about the correct setup.
