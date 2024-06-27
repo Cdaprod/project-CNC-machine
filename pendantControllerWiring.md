@@ -1,3 +1,41 @@
+No worries! I'll help translate any relevant information in the images for you. Let's analyze each of the images you provided.
+
+1. **IMG_9D1518E5-12E7-44E0-8258-48D1BF0CBB1F**:
+   - Shows a green wiring connector panel with numbers 1-6 and other numbers up to 25.
+   - Appears to be part of a controller device.
+
+2. **IMG_35440B3F-6C88-4D7C-8F07-BA3519994DA1**:
+   - Features text written in Chinese.
+   - Likely a wiring diagram or information guide for the controller.
+
+3. **IMG_CBBF128C-21AA-4EEB-BC9F-44E95A56E0A9**:
+   - Contains additional wiring information and diagrams.
+
+4. **Image C53F1427-75FF-4E00-B259-ED6907D17465**:
+   - Has a grid showing wire colors, signals, and their corresponding functions.
+
+5. **Image F945B663-05EC-4EB5-B274-C236507703A7**:
+   - Displays information about wiring connections.
+
+Let's summarize the translation of the Chinese text:
+
+- The images show tables with wiring colors and corresponding signal functions. Here's an approximate translation:
+  - **红线 (Red line)**: VCC (5V power supply)
+  - **黑线 (Black line)**: OV (Ground)
+  - **绿线 (Green line)**: A (Signal A)
+  - **白线 (White line)**: B (Signal B)
+  - **紫线 (Violet line)**: A- (Complementary signal A-)
+  - **紫黑线 (Purple black line)**: B- (Complementary signal B-)
+  - **黄线 (Yellow line)**: X (Select X-axis)
+  - **黄黑线 (Yellow black line)**: Y (Select Y-axis)
+  - **棕线 (Brown line)**: Z (Select Z-axis)
+
+This pattern continues with other signal lines for the various axes and control features. These diagrams aim to help you connect wires correctly to the manual pulse generator and the CNC controller.
+
+Please let me know if you want specific information from any diagram or guidance on wiring.
+
+---
+
 Great, you've provided both the MPG wiring schematic and a picture of the CNC controller's connectors. Let's break down the wiring connections based on the information provided.
 
 ![Untranslated Manual - Side 1](/images/IMG_35440B3F-6C88-4D7C-8F07-BA3519994DA1.jpeg)
