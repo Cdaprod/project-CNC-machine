@@ -1,4 +1,72 @@
-No worries! I'll help translate any relevant information in the images for you. Let's analyze each of the images you provided.
+# Offline Manual Pulse Generator (MPG) Wiring Chart and Translation from Chinese to English
+#### By: David Cannan | Cdaprod
+
+Based on the images and the wiring table you provided, we can create a clear wiring diagram to connect your Manual Pulse Generator (MPG) to the printer plug breakout board for your CNC. Here’s a step-by-step guide:
+
+### Wiring Table for the MPG (Manual Pulse Generator)
+1. **VCC (Red)**: +5V power supply
+2. **0V (Black)**: Ground
+3. **A (Green)**: Signal A
+4. **B (White)**: Signal B
+5. **A- (Violet)**: Complementary signal A- (optional for differential signal transmission)
+6. **B- (Purple black)**: Complementary signal B- (optional for differential signal transmission)
+7. **X (Yellow)**: Select X-axis
+8. **Y (Yellow black)**: Select Y-axis
+9. **Z (Brown)**: Select Z-axis
+10. **4 (Brown black)**: Select 4th axis
+11. **5 (Powder)**: Select 5th axis
+12. **6 (Powder black)**: Select 6th axis
+13. **X1 (Grey)**: Multiplier x1
+14. **X10 (Grey black)**: Multiplier x10
+15. **X100 (Orange black)**: Multiplier x100
+16. **C (Blue)**: Common for STOP
+17. **NC (Blue black)**: Normally Closed for STOP
+18. **LED+ (Green)**: LED positive
+19. **LED- (Black)**: LED negative
+20. **COM (Orange)**: Common terminal
+
+### Printer Plug Breakout Board Pin Assignments
+Refer to the breakout board pin numbers and match them with the corresponding MPG wires:
+
+- Pin 1: +5V (connect VCC, Red)
+- Pin 2: Ground (connect 0V, Black)
+- Pin 3: Signal A (connect A, Green)
+- Pin 4: Signal B (connect B, White)
+- Pin 5: Complementary signal A- (connect A-, Violet)
+- Pin 6: Complementary signal B- (connect B-, Purple black)
+- Pin 7: Select X-axis (connect X, Yellow)
+- Pin 8: Select Y-axis (connect Y, Yellow black)
+- Pin 9: Select Z-axis (connect Z, Brown)
+- Pin 10: Select 4th axis (connect 4, Brown black)
+- Pin 11: Select 5th axis (connect 5, Powder)
+- Pin 12: Select 6th axis (connect 6, Powder black)
+- Pin 13: Multiplier x1 (connect X1, Grey)
+- Pin 14: Multiplier x10 (connect X10, Grey black)
+- Pin 15: Multiplier x100 (connect X100, Orange black)
+- Pin 16: Common for STOP (connect C, Blue)
+- Pin 17: Normally Closed for STOP (connect NC, Blue black)
+- Pin 18: LED positive (connect LED+, Green)
+- Pin 19: LED negative (connect LED-, Black)
+- Pin 20: Common terminal (connect COM, Orange)
+
+### Steps to Connect the Wires
+1. **Identify the Pins on the Breakout Board**: Locate each pin number on the breakout board as shown in the image.
+2. **Prepare the Wires**: Strip the ends of the MPG wires if necessary to expose the conductors.
+3. **Connect the Wires**: Using the provided wiring table, connect each wire from the MPG to the corresponding pin on the breakout board. Ensure each connection is secure.
+4. **Double-Check Connections**: Verify that each wire is connected to the correct pin as per the wiring table.
+
+### Example
+If you are connecting the VCC (Red) wire from the MPG to the +5V power supply on the breakout board, you would connect it to pin 1.
+
+### Notes
+- Ensure that the power supply is off while making the connections to avoid any accidental shorts or electrical hazards.
+- If you encounter any issues with the connections or if the MPG does not function correctly, double-check the wiring table and ensure each wire is securely connected to the correct pin.
+
+By following these steps and using the provided wiring table, you should be able to connect your MPG to the printer plug breakout board correctly.
+
+---
+
+## Research
 
 1. **IMG_9D1518E5-12E7-44E0-8258-48D1BF0CBB1F**:
    - Shows a green wiring connector panel with numbers 1-6 and other numbers up to 25.
